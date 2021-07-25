@@ -16,9 +16,9 @@ A tiny script to make dialog windows accessible to assistive technology users.
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/HugoGiraudel/a11y-dialog)
-- [Bugs](https://github.com/HugoGiraudel/a11y-dialog/issues)
-- [Repository](https://github.com/HugoGiraudel/a11y-dialog)
+- [Homepage](https://a11y-dialog.netlify.app/)
+- [Bugs](https://github.com/KittyGiraudel/a11y-dialog/issues)
+- [Repository](https://github.com/KittyGiraudel/a11y-dialog)
 - [Npm](https://www.npmjs.com/package/a11y-dialog)
     
 
